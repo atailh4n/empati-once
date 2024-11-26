@@ -24,7 +24,7 @@ const SiteFooter: React.FC = () => {
         </Button>
         <Button
           href="https://discord.com/invite/5EyAQ4eNdS"
-          prefixIcon="instagram"
+          prefixIcon="FaInstagram"
           size="s"
           variant="tertiary"
         >
