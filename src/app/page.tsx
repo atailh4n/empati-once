@@ -63,7 +63,7 @@ export default function Home() {
           padding="l"
           gap="l"
         >
-          <Flex mobileDirection="column" fillWidth gap="24">
+          <Flex direction="column" fillWidth gap="24">
             <Flex
               position="relative"
               flex={0}
