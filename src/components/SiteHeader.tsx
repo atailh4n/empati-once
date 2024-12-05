@@ -9,7 +9,6 @@ const SiteHeader: React.FC = () => {
   return (
     <Flex>
       <Flex
-        flex={1}
         hide="s"
         style={{
           borderBottom: "1px solid var(--neutral-border-medium)",
@@ -20,7 +19,7 @@ const SiteHeader: React.FC = () => {
         height="64"
         background="surface"
       >
-        <Flex flex={1} hide="s" alignItems="center">
+        <Flex hide="s" alignItems="center">
           <Logo
             href="/"
             about="empati.org"
@@ -35,7 +34,7 @@ const SiteHeader: React.FC = () => {
             <span className="font-secondary">EMPATİ</span>
           </Heading>
         </Flex>
-        <Flex flex={1} hide="s" fillWidth gap="4" paddingX="l" alignItems="center">
+        <Flex hide="s" fillWidth gap="4" paddingX="l" alignItems="center">
           <ToggleButton
             selected={pathname === "/about-us"}
             href="/about-us"

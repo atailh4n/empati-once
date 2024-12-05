@@ -6,7 +6,6 @@ const SiteFooter: React.FC = () => {
   return (
     <Flex
       as="footer"
-      flex={1}
       position="relative"
       fillWidth
       paddingX="l"
@@ -19,13 +18,13 @@ const SiteFooter: React.FC = () => {
       <Text variant="body-default-s" onBackground="neutral-weak">
         © 2024 Empati Web Yazılım, Her hakkı saklıdır.
       </Text>
-      <Flex flex={1} gap="12">
-        <Button href="tel:+905444444444" size="s" variant="tertiary">
+      <Flex gap="12">
+        <Button href="tel:+905432050200" prefixIcon="phone" size="s" variant="tertiary">
           Telefon
         </Button>
         <Button
-          href="https://discord.com/invite/5EyAQ4eNdS"
-          prefixIcon="FaInstagram"
+          href="https://instagram.com/empatiweb"
+          prefixIcon="instagram"
           size="s"
           variant="tertiary"
         >

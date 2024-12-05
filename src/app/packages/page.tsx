@@ -19,8 +19,8 @@ export default function Packages() {
   const links = [
     {
       href: "https://once-ui.com/docs/theming",
-      title: "Web Dizayn Randevusu",
-      description: "Web Dizayn için saniyeler içinde ulaşın.",
+      title: "Web Tasarım Randevusu",
+      description: "Web Tasarım için saniyeler içinde ulaşın.",
     },
     {
       href: "https://once-ui.com/docs/flexComponent",

@@ -11,24 +11,24 @@ import {
   Icon,
   LetterFx,
   Arrow,
-  SmartImage,
 } from "@/once-ui/components";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   const links = [
     {
-      href: "https://once-ui.com/docs/theming",
-      title: "Web Dizayn Randevusu",
-      description: "Web Dizayn için saniyeler içinde ulaşın.",
+      href: "https://wa.me/+905432050200",
+      title: "Web Tasarım Randevusu",
+      description: "Web tasarım için saniyeler içinde ulaşın.",
     },
     {
-      href: "https://once-ui.com/docs/flexComponent",
+      href: "https://wa.me/+905432050200",
       title: "SEO İşlemleri Randevusu",
       description: "Sitenizi en öne çıkarmak için Empati'ye ulaşın.",
     },
     {
-      href: "https://once-ui.com/docs/typography",
+      href: "https://wa.me/+905432050200",
       title: "Diğer Web İşlemleri",
       description: "Sitenize eşi bulunmaz destek için ulaşın.",
     },
@@ -80,7 +80,7 @@ export default function Home() {
                 </span>
               </Heading>
               <span className="font-code font-size-xl">
-                Evet, gerçekten rakibimiz yok. Merakınız mı var?
+                Evet, gerçekten rakibimiz yok. Merakınız mı var? Ya da rakip mi buldunuz?
               </span>
               <Button id="contact" href="/contact-us" variant="secondary">
                 <Flex alignItems="center">
@@ -89,12 +89,12 @@ export default function Home() {
                 </Flex>
               </Button>
             </Flex>
-            <SmartImage
-              src="/images/cover.png"
-              alt="Web Design & SEO"
-              aspectRatio="16/9"
-              radius="m"
-              objectFit="cover"
+            <Image
+              src="/images/empati_jobs.png"
+              width={640}
+              height={360}
+              alt="Web Design Tasarım & SEO"
+              objectFit="scale-down"
             />
           </Flex>
           <Grid
