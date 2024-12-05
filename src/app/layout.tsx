@@ -42,7 +42,6 @@ type FontConfig = {
 	Replace with code for secondary and tertiary fonts
 	from https://once-ui.com/customize
 */
-const secondary1: FontConfig | undefined = undefined;
 const secondary = Horizon_Outlined({
   variable: '--font-secondary',
   src: [
@@ -104,8 +103,8 @@ export default function RootLayout({
   return (
     <Flex
       as="html"
-      lang="en"
-      fillHeight
+      lang="tr"
+      direction="column"
       background="page"
       data-neutral={style.neutral}
       data-brand={style.brand}
@@ -130,26 +129,25 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
         />
       </head>
-      <Flex as="body" direction="column" fillWidth fillHeight margin="0" padding="0">
+      <Flex as="body" direction="column" flex={1} margin="0" padding="0">
         <Background
           style={{ zIndex: "-1" }}
           position="fixed"
           mask="cursor"
           dots={{
             display: true,
-            opacity: 0.4,
+            opacity: 0.3,
             size: "24",
-            color: "accent-solid-medium"
           }}
           gradient={{
             display: true,
             opacity: 0.7,
           }}
         />
-        <Flex flex={1} direction="column">
+        <Flex direction="column" flex={1}>
           <RevealFx>
           <SiteHeader />
-          {children}
+            {children}
           <SiteFooter />
           </RevealFx>
         </Flex>

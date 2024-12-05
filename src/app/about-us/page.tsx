@@ -15,7 +15,7 @@ import {
 } from "@/once-ui/components";
 import Link from "next/link";
 
-export default function Home() {
+export default function AboutUs() {
   const links = [
     {
       href: "https://once-ui.com/docs/theming",
