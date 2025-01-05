@@ -23,7 +23,7 @@ export default function WhatIsWebDesign() {
         gap="l"
       >
         {/* Başlık */}
-        <Heading variant="display-strong-m">
+        <Heading variant="display-strong-m" align="center">
           WEB TASARIM (DESIGN) NEDİR VE NEDEN ÖNEMLİDİR?
         </Heading>
 
