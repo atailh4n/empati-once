@@ -19,7 +19,7 @@ export default function ContactUs() {
       gap="l"
     >
       <Icon size="xl" name="whatsapp" />
-      <Text variant="display-strong-s" align="center">
+      <Text variant="display-strong-xs" align="center">
         BİZİMLE İLETİŞİME GEÇMEK İÇİN WhatsApp'ı KULLANABİLİRSİNİZ!
       </Text>
       <Text variant="body-default-l" align="center" onBackground="neutral-weak">
