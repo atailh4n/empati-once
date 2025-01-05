@@ -77,18 +77,18 @@ export default function Home() {
             </Flex>
             <Flex
               flex={1}
-  direction="column"
-  style={{ position: "relative", width: "100%", height: "auto" }}
->
-  <Image
-    src="/images/empati_jobs.png"
-    alt="Web Design Tasarım & SEO"
-    layout="responsive" // fill yerine daha doğru bir alternatif
-    width={1600} // Orijinal genişlik değerini buraya girin
-    height={900} // Orijinal yükseklik değerini buraya girin
-    priority
-  />
-</Flex>
+              direction="column"
+              style={{ position: "relative", width: "100%", height: "auto" }}
+            >
+              <Image
+                src="/images/empati_jobs.png"
+                alt="Web Design Tasarım & SEO"
+                layout="responsive"
+                width={1600}
+                height={900}
+                priority
+                />
+            </Flex>
 
           {/* Empati Brand Carousel */}
           <BrandSection />
