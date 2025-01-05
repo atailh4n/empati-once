@@ -76,7 +76,7 @@ export default function Home() {
               </Button>
             </Flex>
             <Flex
-              position="absolute"
+              position="fixed"
               flex={1}
               direction="column"
             >
