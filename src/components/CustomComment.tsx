@@ -29,7 +29,7 @@ const variantIconMap: {
 const CustomComment = forwardRef<HTMLDivElement, FeedbackProps>(
   (
     {
-      variant = "comment",
+      variant = "info",
       icon,
       title,
       description,
@@ -50,8 +50,8 @@ const CustomComment = forwardRef<HTMLDivElement, FeedbackProps>(
         radius="l"
         ref={ref}
         borderStyle="solid-1"
-        border={`${variant}-medium`}
-        background={`${variant}-medium`}
+        border={`info-medium`}
+        background={`info-medium`}
         role="alert"
         aria-live="assertive"
         className={className}
@@ -63,12 +63,12 @@ const CustomComment = forwardRef<HTMLDivElement, FeedbackProps>(
             <Flex
               padding="4"
               radius="m"
-              border={`${variant}-medium`}
+              border={`info-medium`}
               borderStyle="solid-1"
             >
               <Icon
-                onBackground={`${variant}-medium`}
-                name={variantIconMap[variant]}
+                onBackground={`info-medium`}
+                name={"comment"}
                 aria-hidden="true"
               />
             </Flex>
@@ -88,7 +88,7 @@ const CustomComment = forwardRef<HTMLDivElement, FeedbackProps>(
                   <Flex fillWidth paddingY="4">
                     <Text
                       variant="heading-strong-xl"
-                      onBackground={`${variant}-medium`}
+                      onBackground={`info-medium`}
                       role="heading"
                       aria-level={2}
                     >
@@ -112,7 +112,7 @@ const CustomComment = forwardRef<HTMLDivElement, FeedbackProps>(
                 <Flex fillWidth>
                   <Text
                     variant="body-default-l"
-                    onBackground={`${variant}-strong`}
+                    onBackground={`info-strong`}
                   >
                     {description}
                   </Text>
@@ -122,7 +122,7 @@ const CustomComment = forwardRef<HTMLDivElement, FeedbackProps>(
                 <Flex fillWidth>
                   <Text
                     variant="body-default-xs"
-                    onBackground={`${variant}-strong`}
+                    onBackground={`info-strong`}
                   >
                     - {saidBy}
                   </Text>
