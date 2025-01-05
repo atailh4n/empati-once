@@ -20,7 +20,7 @@ export default function ContactUs() {
     >
       <Icon size="xl" name="whatsapp" />
       <Text variant="display-strong-m" align="center">
-        Bizimle iletişime geçmek için WhatsApp'ı kullanabilirsiniz!
+        BİZİMLE İLETİŞİME GEÇMEK İÇİN WhatsApp'ı KULLANABİLİRSİNİZ!
       </Text>
       <Text variant="body-default-xl" align="center" onBackground="neutral-weak">
         Size daha hızlı ve kolay bir şekilde destek olabilmek için mesajınızı WhatsApp üzerinden gönderebilirsiniz.
