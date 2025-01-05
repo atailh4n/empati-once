@@ -90,6 +90,7 @@ export default function Home() {
                 priority
                 />
             </Flex>
+          </Flex>
 
           {/* Empati Brand Carousel */}
           <BrandSection />
