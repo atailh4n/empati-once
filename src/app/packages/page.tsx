@@ -1,134 +1,114 @@
 "use client";
 
 import React from "react";
-
 import {
+  Flex,
+  GlitchFx,
+  Grid,
   Heading,
   Text,
-  Flex,
-  Button,
-  Grid,
   Icon,
-  LetterFx,
-  Arrow,
-  SmartImage,
 } from "@/once-ui/components";
 import Link from "next/link";
+import Image from "next/image";
+import { EmpatiBeforeFooter } from "@/components/EmpatiBeforeFooter";
 
-export default function Packages() {
-  const links = [
-    {
-      href: "https://once-ui.com/docs/theming",
-      title: "Web Tasarım Randevusu",
-      description: "Web Tasarım için saniyeler içinde ulaşın.",
-    },
-    {
-      href: "https://once-ui.com/docs/flexComponent",
-      title: "SEO İşlemleri Randevusu",
-      description: "Sitenizi en öne çıkarmak için Empati'ye ulaşın.",
-    },
-    {
-      href: "https://once-ui.com/docs/typography",
-      title: "Diğer Web İşlemleri",
-      description: "Sitenize eşi bulunmaz destek için ulaşın.",
-    },
-  ];
+const packages = [
+  {
+    index: 0,
+    href: "/contact-us",
+    title: "BAŞLANGIÇ PAKETİ",
+    description:
+      "Web tasarım ve SEO temel hizmetlerini içerir. Hızlı başlamak isteyenler için ideal.",
+    price: "₺1,800",
+  },
+  {
+    index: 1,
+    href: "/contact-us",
+    title: "Profesyonel Paket",
+    description:
+      "SEO optimizasyonu ve özel web tasarım çözümleriyle, işinizi bir üst seviyeye taşıyın.",
+    price: "₺4,700",
+  },
+  {
+    index: 2,
+    href: "/contact-us",
+    title: "Kurumsal Paket",
+    description:
+      "Tam kapsamlı SEO ve özel tasarım hizmetiyle, markanızı dijital alanda zirveye taşıyın.",
+    price: "DETAYLI BİLGİ",
+  },
+];
 
+export default function Portfolio() {
   return (
-    <Flex
-      fillWidth
-      flex={1}
-      paddingTop="l"
-      paddingX="l"
-      direction="column"
-      alignItems="center"
-    >
+    <Flex direction="column" alignItems="center" fillWidth>
       <Flex
-        position="relative"
-        flex={1}
-        as="section"
-        overflow="hidden"
-        fillWidth
-        minHeight="0"
-        maxWidth={68}
-        direction="column"
-        alignItems="center"
-      >
-        <Flex
-          as="main"
-          flex={1}
-          direction="column"
-          justifyContent="center"
-          fillWidth
-          fillHeight
-          padding="l"
-          gap="l"
-        >
-          <Flex mobileDirection="column" fillWidth gap="24">
-            <Flex
-              position="relative"
-              flex={1}
-              gap="24"
-              marginBottom="104"
-              direction="column"
-            >
-              <Heading wrap="balance" variant="display-strong-s">
-                <span className="font-secondary">
-                  <LetterFx trigger="instant">
-                    WEB DESIGN & SEO ALANINDA EN İYİ HİZMET.
-                  </LetterFx>
-                </span>
-              </Heading>
-              <span className="font-code font-size-xl">
-                Evet, gerçekten rakibimiz yok. Merakınız mı var?
-              </span>
-              <Button id="contact" href="/contact-us" variant="secondary">
-                <Flex alignItems="center">
-                  <LetterFx trigger="hover">Bize ulaşın.</LetterFx>
-                  <Arrow trigger="#contact" />
-                </Flex>
-              </Button>
-            </Flex>
-            <SmartImage
-              src="/images/cover.png"
-              alt="Web Design & SEO"
-              aspectRatio="16/9"
-              radius="m"
-              objectFit="cover"
-            />
-          </Flex>
-          <Grid
-            radius="l"
-            border="neutral-medium"
-            borderStyle="solid-1"
-            columns="repeat(3, 1fr)"
-            tabletColumns="1col"
-            mobileColumns="1col"
-            fillWidth
-          >
-            {links.map((link) => (
-              <Link
-                target="_blank"
-                style={{ padding: "var(--responsive-space-l)" }}
-                key={link.href}
-                href={link.href}
-              >
-                <Flex fillWidth paddingY="8" gap="8" direction="column">
-                  <Flex fillWidth gap="12" alignItems="center">
-                    <Text variant="body-strong-m" onBackground="neutral-strong">
-                      {link.title}
-                    </Text>
-                    <Icon size="s" name="arrowUpRight" />
-                  </Flex>
-                  <Text variant="body-default-s" onBackground="neutral-weak">
-                    {link.description}
-                  </Text>
-                </Flex>
-              </Link>
-            ))}
-          </Grid>
-        </Flex>
+      paddingY="l">
+        <Image
+          src={"/trademark/logo-dark.png"}
+          alt={"empati.org"}
+          width={48}
+          height={48}
+        />
+        <Heading wrap="balance" variant="display-strong-s" paddingX="8">
+          <span className="font-secondary">
+            <GlitchFx trigger="instant">HİZMET PAKETLERİMİZ</GlitchFx>
+          </span>
+        </Heading>
       </Flex>
+      <Grid
+        radius="l"
+        border="neutral-medium"
+        borderStyle="solid-1"
+        columns="1fr"
+        tabletColumns="1col"
+        mobileColumns="1col"
+        marginBottom="24"
+        fillWidth
+        maxWidth="xl" // Grid genişliğini sınırlıyoruz
+      >
+        {packages.map((pkg) => (
+          <Link
+            key={pkg.index}
+            href={pkg.href}
+            style={{ padding: "var(--responsive-space-l)" }}
+          >
+            <Flex
+              fillWidth
+              paddingY="8"
+              gap="8"
+              direction="column"
+              alignItems="center"
+              radius="l"
+              border="neutral-medium"
+              borderStyle="solid-1"
+            >
+              <Flex fillWidth justifyContent="center">
+                <Image
+                  src={"/trademark/logo-dark.png"}
+                  alt={"empati.org"}
+                  width={48}
+                  height={48}
+                />
+                <Heading paddingLeft="12" variant="display-strong-s">
+                  {pkg.title}
+                </Heading>
+              </Flex>
+              <Flex fillWidth justifyContent="end" paddingY="8" paddingX="24">
+                <Icon size="s" name="arrowUpRight" />
+              </Flex>
+              <Text variant="display-strong-xs" onBackground="neutral-strong">
+                {pkg.price}
+              </Text>
+              <Text variant="body-default-s" onBackground="neutral-weak">
+                {pkg.description}
+              </Text>
+            </Flex>
+          </Link>
+        ))}
+      </Grid>
+      <EmpatiBeforeFooter />
     </Flex>
   );
 }

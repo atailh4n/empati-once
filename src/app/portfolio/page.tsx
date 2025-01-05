@@ -7,38 +7,19 @@ import {
   Text,
   Flex,
   Button,
-  Grid,
-  Icon,
   LetterFx,
   Arrow,
   SmartImage,
-  GlitchFx,
 } from "@/once-ui/components";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import { EmpatiBeforeFooter } from "@/components/EmpatiBeforeFooter";
+import BrandSection from "@/components/BrandSection";
 
 export default function Portfolio() {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
   const [direction, setDirection] = useState<"up" | "down">("down");
   const lastY = useRef<number | null>(null);
-
-  const links = [
-    {
-      href: "https://wa.me/+905432050200",
-      title: "Web Tasarım Randevusu",
-      description: "Web tasarım için saniyeler içinde ulaşın.",
-    },
-    {
-      href: "https://wa.me/+905432050200",
-      title: "SEO İşlemleri Randevusu",
-      description: "Sitenizi en öne çıkarmak için Empati'ye ulaşın.",
-    },
-    {
-      href: "https://wa.me/+905432050200",
-      title: "Diğer Web İşlemleri",
-      description: "Sitenize eşi bulunmaz destek için ulaşın.",
-    },
-  ];
 
   const items = [
     {
@@ -154,9 +135,10 @@ export default function Portfolio() {
                 </span>
               </Heading>
               <span className="font-code font-size-xl">
-                empati.org, Web Tasarım ve SEO alanında deneyimli ekibiyle
-                beraber 2017'den beridir sektörde kartları dağıtan şirket. Evet,
-                gerçekten. Bu da yaptığımız işler:
+                Empati.org, Web Tasarım ve SEO alanında deneyimli ekibiyle
+                2017'den beridir sektörde kartları dağıtan şirket. Sadece bir
+                şirket değiliz, biz bir fark yaratıyoruz! Evet, gerçekten. Bu da
+                yaptığımız işler:
               </span>
               <Button id="contact" href="/contact-us" variant="secondary">
                 <Flex alignItems="center">
@@ -166,11 +148,11 @@ export default function Portfolio() {
               </Button>
             </Flex>
           </Flex>
+          {/* Branding and hizmet section.*/}
+          <BrandSection />
           <Heading wrap="balance" variant="display-strong-s">
             <span className="font-secondary">
-              <GlitchFx trigger="instant">
-                EMPATI.ORG TARAFINDAN YAPILAN SİTELER:
-              </GlitchFx>
+              EMPATI.ORG TARAFINDAN YAPILAN SİTELER:
             </span>
           </Heading>
           <Flex
@@ -233,43 +215,7 @@ export default function Portfolio() {
               )}
             </AnimatePresence>
           </Flex>
-          <Heading wrap="balance" variant="display-strong-s">
-            <span className="font-secondary">
-              <GlitchFx trigger="instant">
-                ARADIĞINI BULAMADIN MI?:
-              </GlitchFx>
-            </span>
-          </Heading>
-          <Grid
-            radius="l"
-            border="neutral-medium"
-            borderStyle="solid-1"
-            columns="repeat(3, 1fr)"
-            tabletColumns="1col"
-            mobileColumns="1col"
-            fillWidth
-          >
-            {links.map((link) => (
-              <Link
-                target="_blank"
-                style={{ padding: "var(--responsive-space-l)" }}
-                key={link.href}
-                href={link.href}
-              >
-                <Flex fillWidth paddingY="8" gap="8" direction="column">
-                  <Flex fillWidth gap="12" alignItems="center">
-                    <Text variant="body-strong-m" onBackground="neutral-strong">
-                      {link.title}
-                    </Text>
-                    <Icon size="s" name="arrowUpRight" />
-                  </Flex>
-                  <Text variant="body-default-s" onBackground="neutral-weak">
-                    {link.description}
-                  </Text>
-                </Flex>
-              </Link>
-            ))}
-          </Grid>
+          <EmpatiBeforeFooter />
         </Flex>
       </Flex>
     </Flex>

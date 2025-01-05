@@ -1,69 +1,98 @@
+/* For BrandSection custom css written by atailh4n */
+@keyframes marquee {
+  0% {
+    transform: translateX(50);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-container {
+  width: 100%; /* Sayfa boyunca genişlik */
+  overflow: hidden;
+}
+
+.animate-marquee-rtl {
+  display: flex;
+  animation: marquee 60s linear infinite;
+}
+
+.animate-marquee-rtl > div {
+  margin-right: 30px; /* Aralarındaki mesafeyi buradan ayarlayabilirsiniz */
+}
+
+/* For AhmetEfe.Net logos */
+.white-logo img {
+  filter: brightness(0) invert(1);
+}
+
 /* BOX-SIZING */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 ul {
-    margin: 0;
-    padding: 0 0 0 var(--static-space-12);
+  margin: 0;
+  padding: 0 0 0 var(--static-space-12);
 }
 
 li {
-    padding: 0;
-    list-style-position: inside;
-    font-size: inherit;
-    color: inherit;
+  padding: 0;
+  list-style-position: inside;
+  font-size: inherit;
+  color: inherit;
 
-    &::marker {
-        margin-right: var(--static-space-4);
-        color: var(--brand-on-background-weak);
-    }
+  &::marker {
+    margin-right: var(--static-space-4);
+    color: var(--brand-on-background-weak);
+  }
 }
 
 img {
-    user-select: none;
+  user-select: none;
 }
 
 /* SELECTION */
 ::selection {
-    background: var(--neutral-on-background-medium);
-    color: var(--neutral-background-strong);
+  background: var(--neutral-on-background-medium);
+  color: var(--neutral-background-strong);
 }
 
 /* LINK */
 a {
-    color: var(--brand-on-background-medium);
-    text-decoration: none;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 0.25em;
-    text-decoration-color: var(--neutral-border-strong) !important;
+  color: var(--brand-on-background-medium);
+  text-decoration: none;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.25em;
+  text-decoration-color: var(--neutral-border-strong) !important;
 
-    &:hover {
-        text-decoration-line: underline;
-    }
+  &:hover {
+    text-decoration-line: underline;
+  }
 }
 
 /* SCROLLBAR */
 ::-webkit-scrollbar {
-    background: var(--static-transparent);
-    width: var(--static-space-8);
-    height: var(--static-space-8);
+  background: var(--static-transparent);
+  width: var(--static-space-8);
+  height: var(--static-space-8);
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--static-transparent);
+  background: var(--static-transparent);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--neutral-alpha-medium);
-    border-radius: var(--radius-full);
-    transition: var(--transition-micro-medium);
+  background: var(--neutral-alpha-medium);
+  border-radius: var(--radius-full);
+  transition: var(--transition-micro-medium);
 
-    &:hover {
-        background: var(--neutral-alpha-strong);
-    }
+  &:hover {
+    background: var(--neutral-alpha-strong);
+  }
 }
 
 ::-webkit-scrollbar-corner {
-    background-color: var(--static-transparent);
+  background-color: var(--static-transparent);
 }
