@@ -78,14 +78,15 @@ export default function Home() {
             <Flex
               flex={1}
               direction="column"
-              style={{ position: "relative", width: "100%", height: "auto" }}
+              minWidth={150}
+              minHeight={400}
+              maxWidth={300}
+              maxHeight={800}
             >
               <Image
                 src="/images/empati_jobs.png"
                 alt="Web Design Tasarım & SEO"
                 layout="responsive"
-                width={1600}
-                height={900}
                 priority
                 />
             </Flex>
