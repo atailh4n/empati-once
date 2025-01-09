@@ -1,3 +1,7 @@
 # **Empati Web**
 
-Empati Web Design Web sitesi v2
+Empati Web Design Web sitesi.
+
+Ata İlhan Köktürk tarafından tasarlanmıştır.
+
+Bu proje [OnceUI](https://github.com/once-ui-system/nextjs-starter.git) komponentleri kullanır.
