@@ -149,7 +149,7 @@ export default function WhatIsSEO() {
               align="center"
               onBackground="neutral-strong"
             >
-              Web sitenizin potansiyelini artırmak mı istiyorsunuz??{" "}
+              Web sitenizin potansiyelini artırmak mı istiyorsunuz?{" "}
               <SmartLink
                 href="https://empati.org"
                 prefixIcon="openLink"
