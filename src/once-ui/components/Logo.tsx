@@ -53,7 +53,7 @@ const Logo: React.FC<LogoProps> = ({
             )}
             {iconSrc && (
                 <img
-                    style={{ height: `var(--static-space-${sizeMap[size]})`, width: 'auto' }}
+                    style={{ height: `var(--static-space-${sizeMap[size]})`, width: `var(--static-space-${sizeMap[size]})` }}
                     alt="Trademark"
                     src={iconSrc}
                 />
@@ -66,7 +66,7 @@ const Logo: React.FC<LogoProps> = ({
             )}
             {wordmarkSrc && (
                 <img
-                    style={{ height: `var(--static-space-${sizeMap[size]})`, width: 'auto'}}
+                    style={{ height: `var(--static-space-${sizeMap[size]})`, width: `var(--static-space-${sizeMap[size]})`}}
                     alt="Trademark"
                     src={wordmarkSrc}
                 />

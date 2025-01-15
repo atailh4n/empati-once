@@ -85,7 +85,9 @@ export default function Home() {
                 alt="Web Design Tasarım & SEO"
                 layout="responsive"
                 priority
-                />
+                width={1600}
+                height={900}
+              />
             </Flex>
           </Flex>
 
@@ -251,15 +253,15 @@ export default function Home() {
               ihtiyaçlarınız hakkında ücretsiz danışma için hemen bizimle
               iletişime geçin.
             </Text>
-            <Button id="contact" href="/contact-us" variant="primary">
+            <Button id="contact2" href="/contact-us" variant="primary">
               <Flex alignItems="center">
-                <LetterFx trigger="hover">Hemen İletişime Geçin</LetterFx>
-                <Arrow trigger="#contact" />
+                <LetterFx trigger="hover">Bize de söyleyin</LetterFx>
+                <Arrow trigger="#contact2" color="onSolid" />
               </Flex>
             </Button>
           </Flex>
+          <EmpatiBeforeFooter />
         </Flex>
-        <EmpatiBeforeFooter />
       </Flex>
     </Flex>
   );

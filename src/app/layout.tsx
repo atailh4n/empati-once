@@ -5,6 +5,9 @@ import classNames from "classnames";
 import { headers } from "next/headers";
 import { Metadata } from "next";
 
+// For Google Analaytics and Google Tag Manager (Optional)
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
+
 import {
   baseURL,
   style,
@@ -43,13 +46,13 @@ type FontConfig = {
 	from https://once-ui.com/customize
 */
 const secondary = Horizon_Outlined({
-  variable: '--font-secondary',
+  variable: "--font-secondary",
   src: [
     {
-      path: '../../public/fonts/horizon.otf',
-      weight: '200'
-    }
-  ]
+      path: "../../public/fonts/horizon.otf",
+      weight: "200",
+    },
+  ],
 });
 const tertiary: FontConfig | undefined = undefined;
 /*
@@ -124,6 +127,14 @@ export default function RootLayout({
       )}
     >
       <head>
+        {/* Google Tag Manager Here */}
+        {process.env.GTAG ? (
+          <GoogleTagManager gtmId={process.env.GTAG} />
+        ) : null}
+        {/* Analytics Here */}
+        {process.env.GANALYTICS ? (
+          <GoogleAnalytics gaId={process.env.GANALYTICS} />
+        ) : null}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
@@ -146,9 +157,9 @@ export default function RootLayout({
         />
         <Flex direction="column" flex={1}>
           <RevealFx>
-          <SiteHeader />
+            <SiteHeader />
             {children}
-          <SiteFooter />
+            <SiteFooter />
           </RevealFx>
         </Flex>
       </Flex>

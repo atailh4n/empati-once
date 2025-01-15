@@ -1,6 +1,7 @@
 {
-	"name": "@once-ui-system/nextjs-starter",
-	"version": "0.4.1",
+	"name": "empati-once",
+	"description": "empati.org with OnceUI",
+	"version": "0.0.1",
 	"scripts": {
 		"dev": "next dev",
 		"export": "next export",
@@ -10,11 +11,12 @@
 	},
 	"dependencies": {
 		"@floating-ui/react-dom": "^2.1.1",
+		"@next/third-parties": "^15.1.4",
 		"classnames": "^2.5.1",
 		"compressorjs": "^1.2.1",
 		"framer-motion": "^11.11.17",
 		"lucide-react": "^0.460.0",
-		"next": "^14.2.4",
+		"next": "^15.1.4",
 		"postcss": "^8.4.39",
 		"postcss-preset-env": "^9.5.15",
 		"prismjs": "^1.29.0",

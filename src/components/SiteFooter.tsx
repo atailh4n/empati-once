@@ -30,6 +30,14 @@ const SiteFooter: React.FC = () => {
         >
           Instagram
         </Button>
+        <Button
+          href="https://wa.me/+905432050200"
+          prefixIcon="whatsapp"
+          size="s"
+          variant="tertiary"
+        >
+          WhatsApp
+        </Button>
       </Flex>
     </Flex>
   );

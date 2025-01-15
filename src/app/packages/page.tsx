@@ -42,73 +42,109 @@ const packages = [
 
 export default function Portfolio() {
   return (
-    <Flex direction="column" alignItems="center" fillWidth>
+    <Flex
+      fillWidth
+      flex={1}
+      paddingTop="l"
+      paddingX="l"
+      direction="column"
+      alignItems="center"
+    >
       <Flex
-      paddingY="l">
-        <Image
-          src={"/trademark/logo-dark.png"}
-          alt={"empati.org"}
-          width={48}
-          height={48}
-        />
-        <Heading wrap="balance" variant="display-strong-s" paddingX="8">
-          <span className="font-secondary">
-            <GlitchFx trigger="instant">HİZMET PAKETLERİMİZ</GlitchFx>
-          </span>
-        </Heading>
-      </Flex>
-      <Grid
-        radius="l"
-        border="neutral-medium"
-        borderStyle="solid-1"
-        columns="1fr"
-        tabletColumns="1col"
-        mobileColumns="1col"
-        marginBottom="24"
+        position="relative"
+        flex={1}
+        as="section"
+        overflow="hidden"
         fillWidth
-        maxWidth="xl" // Grid genişliğini sınırlıyoruz
+        minHeight="0"
+        maxWidth={68}
+        direction="column"
+        justifyContent="center"
       >
-        {packages.map((pkg) => (
-          <Link
-            key={pkg.index}
-            href={pkg.href}
-            style={{ padding: "var(--responsive-space-l)" }}
+        <Flex
+          as="main"
+          flex={1}
+          direction="column"
+          fillWidth
+          fillHeight
+          padding="l"
+          gap="l"
+          justifyContent="center"
+        >
+          {/*Content*/}
+
+          <Flex>
+            <Image
+              src={"/trademark/logo-dark.webp"}
+              alt={"empati.org"}
+              width={48}
+              height={48}
+            />
+            <Heading wrap="balance" variant="display-strong-s" paddingX="8">
+              <span className="font-secondary">
+                <GlitchFx trigger="instant">HİZMET PAKETLERİMİZ</GlitchFx>
+              </span>
+            </Heading>
+          </Flex>
+          <Grid
+            radius="l"
+            border="neutral-medium"
+            borderStyle="solid-1"
+            columns="1fr"
+            tabletColumns="1col"
+            mobileColumns="1col"
+            fillWidth
+            maxWidth="l"
           >
-            <Flex
-              fillWidth
-              paddingY="8"
-              gap="8"
-              direction="column"
-              alignItems="center"
-              radius="l"
-              border="neutral-medium"
-              borderStyle="solid-1"
-            >
-              <Flex fillWidth justifyContent="center">
-                <Image
-                  src={"/trademark/logo-dark.png"}
-                  alt={"empati.org"}
-                  width={48}
-                  height={48}
-                />
-                <Heading paddingLeft="12" variant="display-strong-s">
-                  {pkg.title}
-                </Heading>
-              </Flex>
-              <Flex fillWidth justifyContent="end" paddingY="8" paddingX="24">
-                <Icon size="s" name="arrowUpRight" />
-              </Flex>
-              <Text variant="display-strong-xs" onBackground="neutral-strong">
-                {pkg.price}
-              </Text>
-              <Text variant="body-default-s" onBackground="neutral-weak">
-                {pkg.description}
-              </Text>
-            </Flex>
-          </Link>
-        ))}
-      </Grid>
-      <EmpatiBeforeFooter />
+            {packages.map((pkg) => (
+              <Link
+                key={pkg.index}
+                href={pkg.href}
+                style={{ padding: "var(--responsive-space-l)" }}
+              >
+                <Flex
+                  fillWidth
+                  direction="column"
+                  alignItems="center"
+                  radius="l"
+                  border="neutral-medium"
+                  borderStyle="solid-1"
+                  padding="4" // Paddingleri küçülttük
+                  maxWidth={"l"}
+                >
+                  <Flex fillWidth justifyContent="center">
+                    <Image
+                      src={"/trademark/logo-dark.webp"}
+                      alt={"empati.org"}
+                      width={48}
+                      height={48}
+                    />
+                    <Heading variant="display-strong-xs">
+                      {pkg.title}
+                    </Heading>
+                  </Flex>
+                  <Flex
+                    fillWidth
+                    justifyContent="end"
+                  >
+                    <Icon size="xs" name="arrowUpRight" />
+                  </Flex>
+                  <Text
+                    variant="display-strong-xs"
+                    onBackground="neutral-strong"
+                  >
+                    {pkg.price}
+                  </Text>
+                  <Text variant="body-default-s" onBackground="neutral-weak">
+                    {pkg.description}
+                  </Text>
+                </Flex>
+              </Link>
+            ))}
+          </Grid>
+          <EmpatiBeforeFooter />
+        </Flex>
+      </Flex>
     </Flex>
   );
 }

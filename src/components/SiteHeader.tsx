@@ -23,7 +23,7 @@ const SiteHeader: React.FC = () => {
           <Logo
             href="/"
             about="empati.org"
-            iconSrc="trademark/logo-dark.png"
+            iconSrc="trademark/logo-dark.webp"
             wordmark={false}
           />
           <Heading
@@ -72,7 +72,7 @@ const SiteHeader: React.FC = () => {
           <Logo
             href="/"
             about="empati.org"
-            iconSrc="trademark/logo-dark.png"
+            iconSrc="trademark/logo-dark.webp"
             wordmark={false}
           />
           <ToggleButton

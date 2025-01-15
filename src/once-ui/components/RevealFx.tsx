@@ -82,6 +82,7 @@ const RevealFx = forwardRef<HTMLDivElement, RevealFxProps>(({
 			justifyContent="center"
 			ref={ref}
 			aria-hidden="true"
+			role='presentation'
 			style={revealStyle}
 			className={combinedClassName}
 			{...rest}>

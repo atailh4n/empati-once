@@ -1,10 +1,10 @@
-const baseURL = 'empati.com'
+const baseURL = 'empati.org'
 
 // default customization applied to the HTML in the main layout.tsx
 const style = {
     theme:       'dark',        // dark | light
     neutral:     'gray',        // sand | gray | slate
-    brand:       'cyan',        // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
+    brand:       'emerald',        // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
     accent:      'custom',      // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
     solid:       'contrast',    // color | contrast
     solidStyle:  'flat',        // flat | plastic
@@ -17,31 +17,30 @@ const style = {
 // default metadata
 const meta = {
     title: 'Empati.org - Web Design & SEO',
-    description: 'Sektörünün en iyi web design ve SEO şirketi, Empati.'
+    description: 'Sektörünün en iyi Web Design (Tasarım) ve SEO şirketi, Empati.'
 }
 
 
 // default open graph data
 const og = {
     title: 'Empati.org - Web Design & SEO',
-    description: 'Sektörünün en iyi web design ve SEO şirketi, Empati.',
+    description: 'Sektörünün en iyi Web Design (Tasarım) ve SEO şirketi, Empati.',
     type: 'website'
 }
 
 // default schema data
 const schema = {
-    logo: '',
+    logo: 'trademark/logo-dark.webp',
     type: 'Organization',
     name: 'Empati',
-    description: 'Sektörünün en iyi web design ve SEO şirketi, Empati.',
+    description: 'Sektörünün en iyi Web Design (Tasarım) ve SEO şirketi, Empati.',
     email: 'iletisim@empati.org'
 }
 
 // social links
 const social = {
-    twitter: 'https://www.twitter.com/empati.org',
-    linkedin: 'https://www.linkedin.com/company/once-ui/',
-    discord: 'https://discord.com/invite/5EyAQ4eNdS'
+    instagram: 'https://www.instagram.com/empatiweb',
+    whatsapp: 'https://wa.me/+905432050200',
 }
 
 export { baseURL, style, meta, og, schema, social };
