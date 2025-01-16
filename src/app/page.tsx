@@ -90,6 +90,7 @@ export default function Home() {
                 src="/images/empati_jobs.webp"
                 alt="Web Design Tasarım & SEO"
                 priority
+                layout="responsive"
                 width={1600}
                 height={900}
               />
