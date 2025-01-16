@@ -91,8 +91,8 @@ export default function Home() {
                 alt="Web Design Tasarım & SEO"
                 priority
                 layout="responsive"
-                width={1600}
-                height={900}
+                width={400}
+                height={225}
               />
             </Flex>
           </Flex>
