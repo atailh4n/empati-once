@@ -87,9 +87,8 @@ export default function Home() {
               style={{ position: "relative", width: "100%", height: "auto" }}
             >
               <Image
-                src="/images/empati_jobs.png"
+                src="/images/empati_jobs.webp"
                 alt="Web Design Tasarım & SEO"
-                layout="responsive"
                 priority
                 width={1600}
                 height={900}
